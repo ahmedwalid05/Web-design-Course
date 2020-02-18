@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Payment Form</title>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="pay.html">Payment</a>
+            </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Payment Form</h1>
+    <form>
+        <fieldset>
+            <legend>Billing Information (Required)</legend>
+            <label for="fName">First Name*</label>
+            <input required type="text" id="fName" name="fName"> &nbsp;&nbsp;
+
+            <label for="lName">Last Name*</label>
+            <input required type="text" id="lName" name="lName"> <br><br>
+
+            <label for="streetAddress">Street Address*</label>
+            <input required type="text" id="streetAddress" name="streetAddress"> &nbsp;&nbsp;
+
+            <label for="streetAddress2">Street Address(2)</label>
+            <input type="text" id="streetAddress2" name="streetAddress2"> <br><br>
+
+            <label for="city">City *</label>
+            <input required type="text" list="cityList" name="city" id="city">
+            <datalist id="cityList">
+                <option value="Al Daayen"></option>
+                <option value="Al Khor and Dhekra"></option>
+                <option value="Al Rayyan"></option>
+                <option value="Al Shahaniya"></option>
+                <option value="Al Shamal"></option>
+                <option value="Al Wakrah"></option>
+                <option value="Doha"></option>
+                <option value="Umm Salal"></option>
+
+            </datalist>
+            <label for="qAreaCode">Qatar Area Code *</label>
+            <input required type="number" min="1" max="99" step="1" id="qAreaCode" pattern="(99)|[1-9]\d?"
+                name="qAreaCode" style="width: 150px;" placeholder="00 two digits">
+
+            <label for="phoneNumber">Phone Number *</label>
+            <input required type="text" id="phoneNumber" name="phoneNumber" placeholder="xxxx-xxxx"
+                pattern="[0-9]{4}?-[0-9]{4}"><br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Computer Configuration</legend>
+            <label for="processor">Processor Speed</label>
+            <select required  id="processor">
+                <option value="" disabled selected hidden>--Select--</option>
+                <optgroup label="Intel">
+                    <option value="32ghz">3.2 GHZ</option>
+                    <option value="40ghz">4.0 GHZ</option>
+                    <option value="52ghz">5.2 GHZ</option>
+                    <option value="77ghz">7.7 GHZ</option>
+                </optgroup>
+                <optgroup label="AMD Processor">
+                    <option value="42ghz">4.2 GHZ</option>
+                    <option value="50ghz">5.0 GHZ</option>
+                    <option value="60ghz">6.0 GHZ</option>
+
+                </optgroup>
+            </select> <br>
+            <label for="memSize">Memory</label>
+            <label for="memSize">1GB</label>
+            <input required type="number" id="memSize" name="memSize" min="1" max="16" step="1">
+            <label for="memSize">16GB.</label> <br>
+
+            <label for="mointorSize">Monitor Size</label>
+            <select required id=mointorSize>
+                <option value="" disabled selected hidden>--Select--</option>
+                <option> 15"</option>
+                <option> 17"</option>
+                <option> 19"</option>
+                <option> 21"</option>
+                <option> 23"</option>
+            </select>
+
+            <input type="checkbox" id="retinaMonitor">
+            <label for="retinaMonitor">Retina Monitor (+25% Regular Price).</label> <br>
+
+            <label for="harddriveSize">HardDrive Size</label>
+            <select required id=harddriveSize>
+                <option value="" disabled selected hidden>--GB--</option>
+                <option> 250GB</option>
+                <option> 500GB</option>
+                <option> 750GB</option>
+                <option> 1TB</option>
+                <option> 2TB</option>
+
+
+            </select> <br>
+            <label  for="dvdBurner">DVD Burner</label>
+            <input  type="radio" name="dvdBurner" id="yes-dvd" value="YES">
+            <Label for="yes-dvd"> Yes</Label>
+            <input  type="radio" name="dvdBurner" id="no-dvd" value="NO" checked="checked">
+            <Label for="no-dvd"> No</Label> <br>
+
+            <label for="tunerCard">Tuner Card</label>
+            <input  type="radio" name="tunerCard" id="yes-tuner" value="YES">
+            <Label for="yes-tuner"> Yes</Label>
+            <input  type="radio" name="tunerCard" id="no-tuner" value="NO" checked="checked">
+            <Label for="no-tuner"> No</Label> <br>
+
+            <label for="mediaReader">Media Card Reader</label>
+            <input  type="radio" name="mediaReader" id="yes-reader" value="YES">
+            <Label for="yes-reader"> Yes</Label>
+            <input type="radio" name="mediaReader" id="no-reader" value="NO" checked="checked">
+            <Label for="no-reader"> No</Label> <br>
+            <input type="checkbox" id="waranty">
+            <label for="waranty">Yes, I want the 24-Month extended warranty</label><br>
+
+            <label for="specialReq"> Any Special requests on your order</label><br>
+            <textarea id="specialReq" rows="4" cols="50"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Credit Card (required)</legend>
+            <fieldset>
+                <label>
+                    <input required type="radio" name="creditCard" value="amex">
+                    <img src="images/sb_amex.png">
+                </label>
+                <label>
+                    <input type="radio" name="creditCard" value="discover">
+                    <img src="images/sb_discover.png">
+                </label>
+                <label>
+                    <input type="radio" name="creditCard" value="mastercard">
+                    <img src="images/sb_master.png">
+                </label>
+                <label>
+                    <input type="radio" name="creditCard" value="visa">
+                    <img src="images/sb_visa.png">
+                </label>
+
+            </fieldset>
+            <br>
+            <label for="creditCardNumber"> Credit Card Number</label>
+            <input required type="text" name="" id="creditCardNumber"
+                pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
+            <label for="expDate">Expiration Date</label>
+            <select required id=month>
+                <option value="" disabled selected hidden>--Month--</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+
+            </select>
+            <select required id=year>
+                <option value="" disabled selected hidden>--Year--</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+            </select>
+            <label for="csc">CSC</label>
+            <input required type="text" id="csc" minlength="3" pattern="(\d){3}">
+            
+        </fieldset>
+        <input type="submit" value="Signup!">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+
+</html>
