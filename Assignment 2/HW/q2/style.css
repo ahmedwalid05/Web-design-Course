@@ -1,0 +1,121 @@
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+nav,
+div,
+aside {
+    padding: 1.2em;
+}
+
+header,
+footer {
+    background-color: lavender;
+}
+
+article {
+    background-color: darkorange;
+}
+
+nav {
+    background-color: gold;
+}
+
+#aside {
+    background-color: lightcyan;
+}
+
+#siteAds {
+    background-color: hotpink;
+}
+
+
+/* Stack the layout on bigger devices/viewports. */
+
+#pageHeader {
+    grid-area: 1/1/ span 1/ 1;
+    margin-bottom: 5px;
+}
+
+#mainArticle {
+    grid-area: 2/1/ 12/ span 1;
+    margin: 5px 0px;
+}
+
+#mainNav {
+    margin: 5px 0px;
+    grid-area: 12 /1/ 15/span 1;
+}
+
+#aside {
+    margin: 5px 0px;
+    grid-area: 15 /1/ 16/span 1;
+}
+
+#siteAds {
+    margin: 5px 0px;
+    grid-area: 16 /1/ 17/span 1;
+}
+
+#pageFooter {
+    margin: 5px 0px;
+}
+
+@media (min-width: 575px) {
+    #pageHeader {
+        grid-area: 1/1/ span 1/ 4;
+        margin: 5px 5px;
+    }
+    #mainArticle {
+        grid-area: 2/ 2/ 14/ span 2;
+        margin: 5px 5px;
+    }
+    #siteAds {
+        margin: 5px 5px;
+        grid-area: 2 /1/ span 2/span 1;
+    }
+    #mainNav {
+        margin: 5px 5px;
+        grid-area: 4 /1/ 15/span 1;
+    }
+    #pageFooter {
+        margin: 5px 5px;
+        grid-area: 14 / 2/ 15/5;
+    }
+    #aside {
+        margin: 5px 5px;
+        grid-area: 1 /4/ 14/span 1;
+    }
+}
+
+@media (min-width: 875px) {
+    #pageHeader {
+        grid-area: 1 / 1/ 1/ 3;
+        margin: 5px 5px;
+    }
+    #siteAds {
+        margin: 5px 5px;
+        grid-area: 1 /3/ 1/span 10;
+    }
+    #mainNav {
+        margin: 5px 5px;
+        grid-area: 2 /1/ 15/1;
+    }
+    #aside {
+        margin: 5px 5px;
+        grid-area: 2 /2/ 14/2;
+    }
+    #mainArticle {
+        grid-area: 2/ 3/ 14/ span 10;
+        margin: 5px 5px;
+    }
+    #pageFooter {
+        margin: 5px 5px;
+        grid-area: 14 / 2/ 15/span 11;
+    }
+}
